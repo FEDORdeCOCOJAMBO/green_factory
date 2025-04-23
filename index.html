@@ -5,75 +5,145 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Green Factory</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fadeIn 1s ease-out both;
+    }
+  </style>
 </head>
-<body class="bg-green-50 text-gray-800">
-  <main class="max-w-5xl mx-auto p-6 space-y-12">
-    <header class="text-center">
-      <h1 class="text-5xl font-bold text-green-800">Green Factory</h1>
-      <p class="mt-4 text-xl">Capturing Carbon, Empowering Industry</p>
-    </header>
+<body class="bg-green-50 text-gray-800 flex">
 
-    <section class="bg-white shadow-xl rounded-2xl p-6">
-      <h2 class="text-2xl font-semibold text-green-700">About Us</h2>
-      <p class="mt-2">
-        Green Factory is dedicated to revolutionizing industrial sustainability. We specialize in
-        advanced equipment that captures CO₂ emissions directly from factory smokestacks, storing
-        them underground or containing them in gas tanks for further processing. Our mission is to
-        help industries reduce their carbon footprint and contribute to a greener planet.
-      </p>
-    </section>
+<!-- Sidebar Navigation -->
+<!-- Sidebar Navigation -->
+<nav class="fixed top-0 left-0 h-full w-48 bg-green-100 shadow-lg p-4 text-green-900 font-semibold z-10">
+  <h2 class="text-2xl font-bold mb-6">Navigate</h2>
+  <div class="space-y-6">
+    <a href="#about" class="block text-xl hover:text-green-600">About Us</a>
+    <a href="#technology" class="block text-xl hover:text-green-600">Our Technology</a>
+    <a href="#why" class="block text-xl hover:text-green-600">Why Choose Us</a>
+    <a href="#connect" class="block text-xl hover:text-green-600">Connect With Us</a>
+    <a href="#contact" class="block text-xl hover:text-green-600">Contact Us</a>
+  </div>
+</nav>
 
-    <section class="bg-white shadow-xl rounded-2xl p-6">
-      <h2 class="text-2xl font-semibold text-green-700">Our Technology</h2>
-      <ul class="list-disc pl-5 mt-2 space-y-2">
-        <li><strong>Capture CO₂:</strong> Extracts CO₂ from flue gases using state-of-the-art filtration.</li>
-        <li><strong>Store Underground:</strong> Injects captured CO₂ into safe geological formations.</li>
-        <li><strong>Contain in Gas Tanks:</strong> Compresses CO₂ into tanks for transport or reuse.</li>
-      </ul>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-        <div class="text-center">
-          <img src="images/capture.webp" alt="CO2 Capture Diagram" class="rounded-xl shadow-md" />
-          <p class="mt-2 text-sm">CO₂ is captured directly from factory emissions.</p>
-        </div>
-        <div class="text-center">
-          <img src="images/storage.webp" alt="Underground CO2 Storage" class="rounded-xl shadow-md" />
-          <p class="mt-2 text-sm">Captured CO₂ is safely stored underground.</p>
-        </div>
-        <div class="text-center">
-          <img src="images/tanks.jpg" alt="CO2 Gas Tank" class="rounded-xl shadow-md" />
-          <p class="mt-2 text-sm">CO₂ is also compressed into gas tanks.</p>
-        </div>
+<!-- Main Content -->
+<main class="ml-52 max-w-5xl p-6 space-y-12 animate-fade-in">
+
+  <header class="text-center">
+    <h1 class="text-5xl font-bold text-green-800">Green Factory</h1>
+    <p class="mt-4 text-xl">Capturing Carbon, Empowering Industry</p>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="bg-white shadow-xl rounded-2xl p-6 animate-fade-in">
+    <h2 class="text-2xl font-semibold text-green-700">About Us</h2>
+    <p class="mt-2">
+      Green Factory is dedicated to revolutionizing industrial sustainability. We are pioneers in carbon capture solutions, offering cutting-edge technologies that help factories reduce their environmental footprint without compromising productivity. With a team of engineers and environmental scientists, we provide robust infrastructure for cleaner industrial processes.
+    </p>
+    <p class="mt-2">
+      Our philosophy is simple: Industry and ecology can thrive together. We aim to be the bridge that brings green solutions to traditional manufacturing.
+    </p>
+  </section>
+
+  <!-- Technology Section -->
+  <section id="technology" class="bg-white shadow-xl rounded-2xl p-6 animate-fade-in">
+    <h2 class="text-2xl font-semibold text-green-700">Our Technology</h2>
+    <p class="mb-2">
+      We leverage advanced filtration and storage technologies to ensure effective carbon reduction. Our equipment is designed to integrate seamlessly with factory infrastructures.
+    </p>
+    <ul class="list-disc pl-5 space-y-2">
+      <li><strong>Capture CO₂:</strong> High-efficiency scrubbers filter CO₂ directly from emissions.</li>
+      <li><strong>Store Underground:</strong> We use geologically stable areas for long-term CO₂ injection and storage.</li>
+      <li><strong>Contain in Gas Tanks:</strong> Mobile tank systems allow flexible transport and utilization of captured CO₂.</li>
+    </ul>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+      <div class="text-center transform transition-transform hover:scale-105">
+        <img src="capture.webp" alt="CO2 Capture Diagram" class="rounded-xl shadow-md" />
+        <p class="mt-2 text-sm">CO₂ is captured from factory flue gases using custom modules.</p>
       </div>
-    </section>
+      <div class="text-center transform transition-transform hover:scale-105">
+        <img src="storage.webp" alt="Underground CO2 Storage" class="rounded-xl shadow-md" />
+        <p class="mt-2 text-sm">Geological storage ensures long-term safety and stability.</p>
+      </div>
+      <div class="text-center transform transition-transform hover:scale-105">
+        <img src="tanks.jpg" alt="CO2 Gas Tank" class="rounded-xl shadow-md" />
+        <p class="mt-2 text-sm">Mobile CO₂ tanks offer scalable deployment options.</p>
+      </div>
+    </div>
+    <div class="text-center mt-6">
+      <button onclick="document.getElementById('orderModal').classList.remove('hidden')" 
+              class="bg-green-600 hover:bg-green-700 transform hover:scale-105 text-white font-semibold py-2 px-4 rounded shadow transition duration-300">
+        Order Product
+      </button>
+    </div>
+  </section>
 
-    <section class="bg-white shadow-xl rounded-2xl p-6">
-      <h2 class="text-2xl font-semibold text-green-700">Why Choose Us?</h2>
-      <ul class="list-disc pl-5 mt-2 space-y-2">
-        <li><strong>Environmental Impact:</strong> Reduces greenhouse gas emissions significantly.</li>
-        <li><strong>Regulatory Compliance:</strong> Meets current environmental standards.</li>
-        <li><strong>Economic Efficiency:</strong> Lowers costs via carbon credits and reduced taxes.</li>
-        <li><strong>Innovative Solutions:</strong> Based on the latest CO₂ capture technology.</li>
-      </ul>
-    </section>
+  <!-- Why Us Section -->
+  <section id="why" class="bg-white shadow-xl rounded-2xl p-6 animate-fade-in">
+    <h2 class="text-2xl font-semibold text-green-700">Why Choose Us?</h2>
+    <ul class="list-disc pl-5 mt-2 space-y-2">
+      <li><strong>Environmental Impact:</strong> We cut carbon emissions by up to 90%, preserving ecosystems and public health.</li>
+      <li><strong>Regulatory Compliance:</strong> Our systems are compliant with EU and international emission standards.</li>
+      <li><strong>Economic Efficiency:</strong> Leverage tax benefits and carbon credit incentives.</li>
+      <li><strong>Innovative Solutions:</strong> We continuously update our systems based on the latest research and tech breakthroughs.</li>
+    </ul>
+  </section>
 
-    <section class="bg-white shadow-xl rounded-2xl p-6 text-center">
-      <h2 class="text-2xl font-semibold text-green-700">Connect With Us</h2>
-      <a
-        href="https://www.instagram.com/green.factory_forlife"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-block mt-4 text-green-600 hover:underline"
-      >
-        📸 Instagram
-      </a>
-    </section>
+  <!-- Connect Section -->
+  <section id="connect" class="bg-white shadow-xl rounded-2xl p-6 text-center animate-fade-in">
+    <h2 class="text-2xl font-semibold text-green-700">Connect With Us</h2>
+    <p>Follow our sustainability journey and tech updates on social media.</p>
+    <a href="https://www.instagram.com/green.factory_forlife" target="_blank" rel="noopener noreferrer"
+       class="inline-block mt-4 text-green-600 hover:text-green-800 transition duration-300">📸 Instagram</a>
+  </section>
 
-    <section class="bg-white shadow-xl rounded-2xl p-6">
-      <h2 class="text-2xl font-semibold text-green-700">Contact Us</h2>
-      <p><strong>Email:</strong> info@greenfactory.com</p>
-      <p><strong>Phone:</strong> +33 1 23 45 67 89</p>
-      <p><strong>Address:</strong> 123 Green Avenue, Nantes, France</p>
-    </section>
-  </main>
+  <!-- Contact Section -->
+  <section id="contact" class="bg-white shadow-xl rounded-2xl p-6 animate-fade-in">
+    <h2 class="text-2xl font-semibold text-green-700">Contact Us</h2>
+    <p>We’re here to answer your questions and collaborate on projects that matter.</p>
+    <p class="mt-2"><strong>Email:</strong> info@greenfactory.com</p>
+    <p><strong>Phone:</strong> +33 1 23 45 67 89</p>
+    <p><strong>Address:</strong> 123 Green Avenue, Nantes, France</p>
+  </section>
+
+</main>
+
+<!-- Order Modal -->
+<div id="orderModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden transition-opacity duration-500 z-20">
+  <div class="bg-white p-6 rounded-xl shadow-lg max-w-sm w-full relative animate-fade-in">
+    <button onclick="document.getElementById('orderModal').classList.add('hidden')"
+            class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-xl transition-colors">&times;</button>
+    <h3 class="text-xl font-semibold mb-4 text-green-700">Place an Order</h3>
+    <form class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium">Name</label>
+        <input type="text" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Your Name" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Email</label>
+        <input type="email" class="w-full border border-gray-300 rounded px-3 py-2" placeholder="Your Email" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Product</label>
+        <select class="w-full border border-gray-300 rounded px-3 py-2">
+          <option>CO₂ Capture Unit</option>
+          <option>Underground Storage Module</option>
+          <option>Gas Tank System</option>
+        </select>
+      </div>
+      <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded font-semibold w-full transition transform hover:scale-105">
+        Submit Order
+      </button>
+    </form>
+  </div>
+</div>
+
 </body>
 </html>
